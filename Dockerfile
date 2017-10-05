@@ -7,5 +7,6 @@ RUN apk add --update python3 \
 
 RUN mkdir -p /etc/chaperone.d
 COPY chaperone.conf /etc/chaperone.d/chaperone.conf
+COPY fcs_sync.sh /
 
 ENTRYPOINT ["/usr/bin/chaperone"]

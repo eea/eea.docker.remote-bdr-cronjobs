@@ -1,5 +1,7 @@
 1.3 (2017-10-04)
 ----------------
+* Moved curl calls for fcs_cronjob.service in a separate shell script
+  [olimpiurob refs #88394]
 * Renamed fgas_cronjob.service to fcs_cronjob.service and added ods syncing
   [olimpiurob refs #88394]
 
