@@ -2,6 +2,11 @@
 
 [Docker Image](https://hub.docker.com/r/eeacms/remote-bdr-cronjobs/) used for the remote BDR cronjobs
 
+### Run it with environment variable
+
+* CRONTASK_1=*/2 * * * * _command_
+* CRONTASK_2=5 * * * * _command_
+
 ## Copyright and license
 
 The Initial Owner of the Original Code is European Environment Agency (EEA).
