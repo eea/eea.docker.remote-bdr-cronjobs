@@ -1,11 +1,10 @@
-FROM alpine:3.4
+FROM alpine:3.7
 MAINTAINER "European Environment Agency (EEA): IDM2 A-Team" <eea-edw-a-team-alerts@googlegroups.com>
 
-RUN apk add --update python3 \
-    && pip3 install chaperone \
-    && apk --no-cache add curl
+RUN apk --no-cache add curl \
+    && rm -rf /var/cache/apk/*
 
-RUN mkdir -p /etc/chaperone.d
-COPY chaperone.conf /etc/chaperone.d/chaperone.conf
+COPY docker-entrypoint.sh /docker-entrypoint.sh
 
-ENTRYPOINT ["/usr/bin/chaperone"]
+ENTRYPOINT ["/docker-entrypoint.sh"]
+CMD []
